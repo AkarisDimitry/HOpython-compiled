@@ -1,0 +1,6 @@
+import ctypes as C
+math = C.CDLL('./libmymath.so')
+math.add_int(3, 4)
+
+math.add_float.restype = C.c_float
+math.add_float(C.c_float(3.0), C.c_float(4.0))
